@@ -1,47 +1,49 @@
 import React from 'react';
 import './App.css';
+import {auth} from './firebase/firebase.utils';
 import { Switch, Route } from 'react-router-dom';
-import HomePage from './pages/homepage/homepage.component'
+import HomePage from './pages/homepage/homepage.component';
+import ShopPage from './pages/shop/shop.component';
+import Header from './components/header/header.component';
+import SignInAndSignUpPage from './pages/sign-in-and-up/sign-in-and-up.component';
 
-const HatsPage = () => (
-  <div>
-    <h1>HATS PAGE</h1>
-  </div>
-)
-const JacketsPage = () => (
-  <div>
-    <h1>HATS PAGE</h1>
-  </div>
-)
-const SneakersPage = () => (
-  <div>
-    <h1>HATS PAGE</h1>
-  </div>
-)
-const WomenPage = () => (
-  <div>
-    <h1>HATS PAGE</h1>
-  </div>
-)
-const MenPage = () => (
-  <div>
-    <h1>HATS PAGE</h1>
-  </div>
-)
 
-function App() {
-  return (
-    <div>
-      <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route path='/hats' component={HatsPage} />
-        <Route path='/jackets' component={HatsPage} />
-        <Route path='/sneakers' component={HatsPage} />
-        <Route path='/womens' component={HatsPage} />
-        <Route path='/mens' component={HatsPage} />
-      </Switch>
-    </div>
-  );
+
+class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      currentUser: null
+    };
+  }
+
+  unsubscribeFromAuth = null
+
+  componentDidMount() {
+    const unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+      this.setState({currentUser: user})
+
+      console.log(user);
+    });
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
+  }
+
+  render() {
+    return (
+      <div>
+        <Header currentUser={this.state.currentUser}/>
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route path='/shop' component={ShopPage} />
+          <Route path='/signin' component={SignInAndSignUpPage} />
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;

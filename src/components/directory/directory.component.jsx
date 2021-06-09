@@ -12,33 +12,33 @@ class Directory extends React.Component {
                   title: 'hats',
                   imageUrl: 'https://i.ibb.co/f8SYHXy/habib-ayoade-Nh-WW-RW1q-O0-unsplash.jpg',
                   id: 1,
-                  linkUrl: 'hats'
+                  linkUrl: 'shop/hats'
                 },
                 {
                   title: 'jackets',
                   imageUrl: 'https://i.ibb.co/ch6x6vY/lea-ochel-ns-RBb-E6-YLs-unsplash.jpg',
                   id: 2,
-                  linkUrl: 'jackets'
+                  linkUrl: 'shop/jackets'
                 },
                 {
                   title: 'sneakers',
                   imageUrl: 'https://i.ibb.co/tCVpX2f/ryan-plomp-76w-e-DO1u1-E-unsplash.jpg',
                   id: 3,
-                  linkUrl: 'sneakers'
+                  linkUrl: 'shop/sneakers'
                 },
                 {
                   title: 'womens',
                   imageUrl: 'https://i.ibb.co/tY3SMMg/handy-wicaksono-j-XPPUpk9u-SU-unsplash.jpg',
                   size: 'large',
                   id: 4,
-                  linkUrl: 'womens'
+                  linkUrl: 'shop/womens'
                 },
                 {
                   title: 'mens',
                   imageUrl: 'https://i.ibb.co/8YDr1yk/clarisse-meyer-5xbdx3-Tq-Pnw-unsplash.jpg',
                   size: 'large',
                   id: 5,
-                  linkUrl: 'mens'
+                  linkUrl: 'shop/mens'
                 }
             ]
         }

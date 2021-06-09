@@ -1,4 +1,15 @@
 body {
   font-family: 'Montserrat';
-  background-color: black;
+  background-color: rgb(14, 14, 14);
+  color: #fff;
+  padding: 20px 60px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
 }
