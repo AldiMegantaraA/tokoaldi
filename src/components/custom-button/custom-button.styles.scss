@@ -7,12 +7,13 @@
     padding: 0 20px 0 20px;
     font-size: 15px;
     background-color: #fff;
+    border: 1px solid rgb(14, 14, 14);
     color: black;
     text-transform: uppercase;
     font-family: 'Open Sans Condensed';
     font-weight: bolder;
     border-radius: 6px;
-    border: none;
+    // border: none;
     cursor: pointer;
   
     &:hover {
